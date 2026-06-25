@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -53,8 +54,9 @@
     code,pre,.mono{font-family:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace}
     ::selection{background:rgba(79,172,254,.28)}
     :focus-visible{outline:none;box-shadow:var(--focus)}
-    .skip-link{position:fixed;left:18px;top:-80px;z-index:5000;background:#fff;color:#111827;padding:10px 16px;border-radius:10px;font-weight:700;transition:top .2s}
-    .skip-link:focus{top:18px}
+    .skip-link{position:fixed;left:18px;top:18px;z-index:5000;background:#fff;color:#111827;padding:10px 16px;border-radius:10px;font-weight:700;box-shadow:0 10px 30px rgba(15,23,42,.18);transform:translateY(calc(-100% - 40px));opacity:0;pointer-events:none;transition:transform .2s ease,opacity .2s ease}
+    .skip-link:focus-visible{transform:translateY(0);opacity:1;pointer-events:auto}
+    .skip-link:focus:not(:focus-visible){transform:translateY(calc(-100% - 40px));opacity:0;pointer-events:none}
     .bg-animation{position:fixed;inset:0;z-index:-3;background:linear-gradient(45deg,#667eea,#764ba2,#f093fb,#4facfe);background-size:400% 400%;animation:gradientShift 18s ease infinite}
     .bg-animation::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 18% 15%,rgba(255,255,255,.18),transparent 28%),radial-gradient(circle at 82% 28%,rgba(0,242,254,.12),transparent 25%),linear-gradient(180deg,rgba(15,15,35,.08),rgba(15,15,35,.54))}
     .mesh{position:fixed;inset:0;z-index:-2;opacity:.19;background-image:linear-gradient(rgba(255,255,255,.13) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.13) 1px,transparent 1px);background-size:54px 54px;mask-image:linear-gradient(to bottom,black,transparent 90%)}
